@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading;
-using System.IO;
-using System.Numerics;
-using System.Collections;
 
 namespace ReHomeWork
 {
@@ -15,16 +10,9 @@ namespace ReHomeWork
             Data = data;
         }
 
-        //данные
         public int Data { get; set; }
-
-        //левая ветка дерева
         public TreeNode Left { get; set; }
-
-        //правая ветка дерева
         public TreeNode Right { get; set; }
-
-        //рекурсивное добавление узла в дерево
         public void Insert(TreeNode node)
         {
             if (node.Data < Data)
@@ -50,8 +38,6 @@ namespace ReHomeWork
                 }
             }
         }
-
-        //преобразование дерева в отсортированный массив
         public int[] Transform(List<int> elements = null)
         {
             if (elements == null)

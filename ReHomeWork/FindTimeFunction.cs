@@ -37,10 +37,7 @@ namespace ReHomeWork
         }
         public static void СonstantFunction(int[] array, int count)
         {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(array[i]);
-            }
+
         }
 
         public static void SumOfElements(int[] array, int count)
@@ -144,63 +141,33 @@ namespace ReHomeWork
             {
                 pow *= num;
             }
-
         }
         public static void RecPow(int[] array, int count)
         {
-            RecPow(array, count, true);
-        }
-
-
-        static BigInteger f = 0;
-        public static BigInteger RecPow(int[] array, int count,bool y)
-        {
             int num = FindNumForPow(array);
-            BigInteger i = 0;
-
-            if(count == 0)
-            {
-                f = 1;
-            }
-            else
-            {
-                f = RecPow(array, count/2, y);
-                if (count % 2 ==1)
-                {
-                    f = f * f * count;
-                }
-                else
-                {
-                    f = f * f;
-                }
-            }
-            return f;
+            RecPow(num, count);
         }
-
-        static BigInteger h;
         public static BigInteger RecPow(int num, int count)
         {
-            BigInteger pow = 1;
+            BigInteger h;
+
             if (count == 0)
             {
-                h = 1;
+                return 1;
             }
             else
             {
-                pow = RecPow(num, count / 2);
+                h = RecPow(num, count / 2);
                 if (count % 2 == 1)
                 {
-                    h = h * h * num;
+                    return h * h * num;
                 }
                 else
                 {
-                    h *= h;
+                    return h * h;
                 }
             }
-            return h;
         }
-
-
         public static void QuickPow(int[] array, int count)
         {
             BigInteger num = FindNumForPow(array);

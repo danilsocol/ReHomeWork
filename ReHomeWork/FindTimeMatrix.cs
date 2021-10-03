@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
-using System.IO;
-using System.Numerics;
-using System.Collections;
 
 namespace ReHomeWork
 {
